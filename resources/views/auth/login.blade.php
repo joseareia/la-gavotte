@@ -21,10 +21,14 @@
             <div class="col-md-6 col-lg-5">
                 <div class="card">
                     <div class="card-block">
-                        <form class="form-horizontal" role="form" method="POST" novalidate>
+                        <form class="form-horizontal" action="{{ route('authenticate') }}" role="form" method="POST" novalidate>
+                            @csrf
                             <div class="auth-header">
                                 <h1 class="auth-title">Login</h1>
                                 <p class="auth-subtitle">Sign In to your account</p>
+                                @error ('failed-auth')
+                                    <p id="auth-failed" class="auth-subtitle text-danger mt-2">{{ $message }}</p>
+                                @enderror
                             </div>
                             <div class="auth-body">
                                 <div class="form-group">
@@ -48,7 +52,7 @@
                                 </div>
                                 <br>
                                 <div class="form-group text-center">
-                                    <a href="{{route('password.reset')}}" class="auth-ghost-link">Forgot password?</a>
+                                    <a href="{{ route('password.reset') }}" class="auth-ghost-link">Forgot password?</a>
                                 </div>
                             </div>
                         </form>
@@ -61,5 +65,13 @@
 
 <!-- General JS -->
 <script src="{{ asset('js/app.js') }}"></script>
+
+<script>
+    $(document).ready(function() {
+        $("input").change(function() {
+            $("#auth-failed").remove();
+        });
+    });
+</script>
 
 </html>
