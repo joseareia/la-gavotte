@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Login</title>
+    <title>Login Page | LaGavotte - Admin & Dashboard Template</title>
 
     <!-- General CSS -->
     <link rel="stylesheet" href={{ asset('css/app.css') }}>
