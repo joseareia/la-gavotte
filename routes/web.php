@@ -11,4 +11,5 @@ Route::get('logout', [LoginController::class, 'logout'])->name('logout');
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
+    Route::get('/notifications', [DashboardController::class, 'notifications'])->name('notifications');
 });
