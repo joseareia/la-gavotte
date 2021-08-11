@@ -7,8 +7,8 @@
 <div class="row">
     <div class="col-12">
         <div class="card">
-            <div class="card-body m-sm-3 m-md-5">
-                
+            <div class="card-body m-sm-1 m-md-2">
+
             </div>
         </div>
     </div>

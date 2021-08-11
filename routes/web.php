@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\UserController;
 
 Route::get('login', [LoginController::class, 'index'])->name('login');
 Route::post('authenticate', [LoginController::class, 'authenticate'])->name('authenticate');
@@ -11,5 +12,6 @@ Route::get('logout', [LoginController::class, 'logout'])->name('logout');
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
-    Route::get('/notifications', [DashboardController::class, 'notifications'])->name('notifications');
+    Route::get('notifications', [DashboardController::class, 'notifications'])->name('notifications');
+    Route::resource('users', UserController::class);
 });

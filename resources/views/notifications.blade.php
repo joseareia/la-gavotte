@@ -8,7 +8,8 @@
     <div class="col-12">
         <div class="card">
             <div class="card-body m-sm-1 m-md-2">
-                <button class="btn btn-danger" type="button" name="button">Don't click.</button>
+                <button class="btn btn-danger btn-sm" type="button" name="button">Error</button>
+                <button class="btn btn-success btn-sm" type="button" name="button">Success</button>
             </div>
         </div>
     </div>
@@ -18,10 +19,13 @@
 @section('script')
 <script>
     $(document).ready(function() {
-        $("button").click(function() {
-            notyf.error("I said, DON'T CLICK!");
+        $(".btn-danger").click(function() {
+            notyf.error("This is a error message.");
         });
-        notyf.success("Hello! Good message.");
+
+        $(".btn-success").click(function() {
+            notyf.success("This a success message.");
+        });
     });
 </script>
 @endsection
