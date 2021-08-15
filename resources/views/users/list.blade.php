@@ -8,7 +8,7 @@
     <div class="col-12">
         <div class="card">
             <div class="card-body m-sm-1 m-md-2">
-                <table class="table">
+                <table class="table table-striped">
                     <thead>
                         <tr>
                             <th scope="col">#</th>
@@ -19,12 +19,12 @@
                     </thead>
                     <tbody>
                         @foreach ($users as $user)
-                            <tr>
-                                <th scope="row">{{ $user->id }}</th>
-                                <td>{{ $user->name }}</td>
-                                <td>{{ $user->username }}</td>
-                                <td>{{ $user->email }}</td>
-                            </tr>
+                        <tr>
+                            <td scope="row">{{ $user->id }}</td>
+                            <td>{{ $user->name }}</td>
+                            <td>{{ $user->username }}</td>
+                            <td>{{ $user->email }}</td>
+                        </tr>
                         @endforeach
                     </tbody>
                 </table>
@@ -37,7 +37,9 @@
 @section('script')
 <script>
     $(document).ready(function() {
-        // jquery code here
+        $('.table').DataTable({
+            responsive: true
+        });
     });
 </script>
 @endsection

@@ -1,7 +1,7 @@
 @import '~bootstrap/scss/bootstrap';
 @import '~bootstrap-icons/font/bootstrap-icons';
 @import '~notyf/notyf.min.css';
-
+@import '~datatables.net-bs5/css/dataTables.bootstrap5.css';
 $bg-color: #f7f9fc;
 $paragraph-color: #6c757d;
 $h-color: #495057;
@@ -9,14 +9,29 @@ $h-color: #495057;
 body {
     background-color: $bg-color;
     color: $paragraph-color;
-    font-size: .825rem !important;
+    font-size: 0.825rem !important;
     font-weight: 400;
     line-height: 1.625;
 }
 
-.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     color: $h-color;
     margin-bottom: 1rem !important;
+}
+
+th {
+    font-weight: 600;
 }
 
 .main {
@@ -24,7 +39,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
     min-width: 0;
-    transition: margin-left .35s ease-in-out, left .35s ease-in-out, margin-right .35s ease-in-out, right .35s ease-in-out;
+    transition: margin-left 0.35s ease-in-out, left 0.35s ease-in-out, margin-right 0.35s ease-in-out, right 0.35s ease-in-out;
     width: 100%;
 }
 
@@ -53,7 +68,7 @@ body {
     direction: ltr;
     max-width: 260px;
     min-width: 260px;
-    transition: margin-left .35s ease-in-out, left .35s ease-in-out, margin-right .35s ease-in-out, right .35s ease-in-out;
+    transition: margin-left 0.35s ease-in-out, left 0.35s ease-in-out, margin-right 0.35s ease-in-out, right 0.35s ease-in-out;
 }
 
 .sidebar-content {
@@ -123,7 +138,7 @@ body {
 .sidebar-brand svg {
     fill: #4a88eb;
     height: 24px;
-    margin-right: .15rem;
+    margin-right: 0.15rem;
     width: 24px;
 }
 
@@ -139,8 +154,8 @@ body {
 .sidebar-header {
     background: transparent;
     color: #ced4da;
-    font-size: .75rem;
-    padding: 1.5rem 1.5rem .375rem;
+    font-size: 0.75rem;
+    padding: 1.5rem 1.5rem 0.375rem;
 }
 
 .sidebar-link,
@@ -149,7 +164,7 @@ a.sidebar-link {
     cursor: pointer;
     display: block;
     font-weight: 400;
-    padding: .625rem 1.625rem;
+    padding: 0.625rem 1.625rem;
     position: relative;
     text-decoration: none;
     transition: color 75ms ease-in-out;
@@ -166,14 +181,14 @@ a.sidebar-link {
 }
 
 .sidebar-item.active .sidebar-link:hover,
-.sidebar-item.active>.sidebar-link {
+.sidebar-item.active > .sidebar-link {
     color: #e9ecef;
 }
 
 .sidebar-item.active .sidebar-link:hover i,
 .sidebar-item.active .sidebar-link:hover svg,
-.sidebar-item.active>.sidebar-link i,
-.sidebar-item.active>.sidebar-link svg {
+.sidebar-item.active > .sidebar-link i,
+.sidebar-item.active > .sidebar-link svg {
     color: #e9ecef;
 }
 
@@ -182,10 +197,11 @@ a.sidebar-link {
 a.sidebar-link i,
 a.sidebar-link svg {
     color: rgba(233, 236, 239, .5);
-    margin-right: .75rem;
+    margin-right: 0.75rem;
 }
 
-.badge-sidebar-primary, .badge-sidebar-secondary {
+.badge-sidebar-primary,
+.badge-sidebar-secondary {
     position: absolute;
     right: 20px;
     top: 14px;
@@ -204,17 +220,19 @@ a.sidebar-link svg {
 .navbar {
     border-bottom: 0;
     box-shadow: 0 0 2rem 0 rgba(41, 48, 66, .1);
-    padding: .875rem 1.25rem;
+    padding: 0.875rem 1.25rem;
 }
 
-.hamburger, .hamburger::after, .hamburger::before {
+.hamburger,
+.hamburger::after,
+.hamburger::before {
     background: #495057;
     border-radius: 1px;
     content: "";
     cursor: pointer;
     display: block;
     height: 3px;
-    transition: background .1s ease-in-out, color .1s ease-in-out;
+    transition: background 0.1s ease-in-out, color 0.1s ease-in-out;
     width: 24px;
     position: relative;
 }
@@ -243,7 +261,7 @@ body:not([data-sidebar-position="right"]) .sidebar-toggle {
 }
 
 .dropdown-item {
-    font-size: .825rem !important;
+    font-size: 0.825rem !important;
 }
 
 .dropdown:hover {
@@ -252,4 +270,40 @@ body:not([data-sidebar-position="right"]) .sidebar-toggle {
 
 body:not([data-sidebar-position="right"]) .navbar-align {
     margin-left: auto;
+}
+
+.page-item.active .page-link {
+    background-color: #3f80ea;
+    border-color: #3f80ea;
+    color: #fff;
+    z-index: 3;
+}
+
+.page-item:not(:first-child) .page-link {
+    margin-left: -1px;
+}
+
+.page-link {
+    padding: 0.3rem 0.75rem;
+}
+
+.page-link {
+    border: 1px solid #dee6ed;
+    display: block;
+    position: relative;
+    transition: color 0.15s ease-in-out,background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out;
+}
+
+.form-select-sm {
+    padding-top: 0.15rem;
+    padding-bottom: 0.15rem;
+    padding-left: 0.5rem;
+    font-size: 0.75rem;
+}
+
+.form-control-sm {
+    border-radius: .1rem;
+    font-size: .75rem;
+    min-height: calc(1.51875rem + 2px);
+    padding: .15rem .5rem;
 }

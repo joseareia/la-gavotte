@@ -22,6 +22,8 @@
     "dependencies": {
         "bootstrap": "^5.1.0",
         "bootstrap-icons": "^1.5.0",
+        "datatables.net-bs5": "^1.10.25",
+        "datatables.net-dt": "^1.1.0",
         "jquery": "^3.6.0",
         "notyf": "^3.10.0"
     }
