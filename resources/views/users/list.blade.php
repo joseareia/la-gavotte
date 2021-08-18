@@ -35,7 +35,7 @@
                 <div class="row mb-3">
                     <div class="col-12">
                         <label for="inputEmail" class="form-label form-label-sm">Name</label>
-                        <input type="email" class="form-control form-control-sm" id="inputEmail">
+                        <input type="email" class="form-control form-control-sm" id="inputEmail" placeholder="Insert a name...">
                     </div>
                 </div>
                 <div class="row mb-3">
