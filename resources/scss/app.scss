@@ -302,8 +302,29 @@ body:not([data-sidebar-position="right"]) .navbar-align {
 }
 
 .form-control-sm {
-    border-radius: .1rem;
-    font-size: .75rem;
+    border-radius: 0.1rem;
+    font-size: 0.75rem;
     min-height: calc(1.51875rem + 2px);
-    padding: .15rem .5rem;
+    padding: 0.15rem 0.5rem;
+}
+
+.btn-primary {
+    background-color: #3f80ea !important;
+    border-color: #3f80ea !important;
+}
+
+.btn {
+    font-size: 0.825rem;
+    padding: 0.25rem 0.7rem;
+}
+
+.btn-group-form {
+    float: right;
+    width: auto;
+    margin-left: auto;
+}
+
+.btn[type="reset"] {
+    outline: none !important;
+    box-shadow: none;
 }

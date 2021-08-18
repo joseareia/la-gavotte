@@ -32,24 +32,30 @@
     <div class="col-4">
         <div class="card">
             <div class="card-body m-sm-1 m-md-2">
-                <div class="row mb-3">
-                    <div class="col-12">
-                        <label for="inputEmail" class="form-label form-label-sm">Name</label>
-                        <input type="email" class="form-control form-control-sm" id="inputEmail" placeholder="Insert a name...">
+                <form class="" action="index.html" method="post">
+                    <div class="row mb-3">
+                        <div class="col-12">
+                            <label for="inputName" class="form-label">Name <span class="text-danger">*</span></label>
+                            <input type="email" class="form-control" id="inputName">
+                        </div>
                     </div>
-                </div>
-                <div class="row mb-3">
-                    <div class="col-12">
-                        <label for="inputEmail" class="form-label form-label-sm">Username</label>
-                        <input type="email" class="form-control form-control-sm" id="inputEmail">
+                    <div class="row mb-3">
+                        <div class="col-12">
+                            <label for="inputUsername" class="form-label">Username <span class="text-danger">*</span></label>
+                            <input type="email" class="form-control" id="inputUsername">
+                        </div>
                     </div>
-                </div>
-                <div class="row mb-3">
-                    <div class="col-12">
-                        <label for="inputEmail" class="form-label form-label-sm">Email</label>
-                        <input type="email" class="form-control form-control-sm" id="inputEmail">
+                    <div class="row mb-3">
+                        <div class="col-12">
+                            <label for="inputEmail" class="form-label">Email <span class="text-danger">*</span></label>
+                            <input type="email" class="form-control" id="inputEmail">
+                        </div>
                     </div>
-                </div>
+                    <div class="btn-group-form">
+                            <button class="btn btn-reset" type="reset" name="button">Clear</button>
+                            <button class="btn btn-primary" type="button" name="button">Submit</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
