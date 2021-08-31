@@ -8,7 +8,7 @@
     <div class="col-8">
         <div class="card">
             <div class="card-body m-sm-1 m-md-2">
-                <table class="table table-striped">
+                <table class="table table-striped stripe">
                     <thead>
                         <tr>
                             <th scope="col">Name</th>
@@ -52,8 +52,8 @@
                         </div>
                     </div>
                     <div class="btn-group-form">
-                            <button class="btn btn-reset" type="reset" name="button">Clear</button>
-                            <button class="btn btn-primary" type="button" name="button">Submit</button>
+                        <button class="btn btn-reset" type="reset" name="button">Clear</button>
+                        <button class="btn btn-primary" type="button" name="button">Submit</button>
                     </div>
                 </form>
             </div>
@@ -66,7 +66,8 @@
 <script>
     $(document).ready(function() {
         $('.table').DataTable({
-            responsive: true
+            responsive: true,
+            select: true
         });
     });
 </script>
